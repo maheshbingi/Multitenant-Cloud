@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="Multitenant">
+				<and name="User">
+					<or name="Project">
+						<and mandatory="true" name="Tasks">
+							<feature name="Calendar"/>
+							<feature name="Resources"/>
+							<feature name="Risk"/>
+							<and name="hasData">
+								<feature mandatory="true" name="GanttChart"/>
+							</and>
+						</and>
+						<and mandatory="true" name="Board">
+							<and name="Columns">
+								<and name="NewTask">
+									<feature name="Requested"/>
+									<feature name="InProgress"/>
+									<feature name="Done"/>
+								</and>
+								<and name="hasTask">
+									<feature name="changeStatus"/>
+								</and>
+							</and>
+							<feature name="Swimlane"/>
+						</and>
+						<and mandatory="true" name="Backlog">
+							<and name="Theme">
+								<feature name="userStory"/>
+							</and>
+							<and name="Sprint">
+								<and name="Stats">
+									<and mandatory="true" name="hasSprinStories">
+										<feature name="BurnUpChart"/>
+										<feature name="BurnDownChart"/>
+										<feature name="VelocityChart"/>
+									</and>
+								</and>
+							</and>
+						</and>
+					</or>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
