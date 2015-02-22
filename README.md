@@ -7,5 +7,3 @@ The goal of this project was to explore issues and challenges in designing a mul
 - Kanbanize
 - Gantter
 - EasyBacklog
-
-
